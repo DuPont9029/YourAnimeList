@@ -67,3 +67,14 @@ input[type="file"]:hover {
         margin-bottom: 10px;
     }
 }
+
+header {
+    text-align: right;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    overflow: hidden;
+}
