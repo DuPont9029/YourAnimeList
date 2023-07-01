@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YourAnimeList</title>
+    <link rel="stylesheet" href="./src/stylesheet.css">
+    <link rel="stylesheet" href="./src/popup.css">
+    <script src="./src/script1.js"></script>
+    <script src="./src/script2.js"></script>
+    <script src="./src/popup.js"></script>
+</head>
+<body>
+
+    <div id="custom-popup" class="popup" style="display: none;">
+        <p>Hai già scaricato il file XML?</p>
+        <div class="popup-buttons">
+            <button onclick="handleConfirmation('yes')">Sì</button>
+            <button onclick="handleConfirmation('no')">No</button>
+        </div>
+    </div>
+
+    <h1>Anime List</h1>
+    <div class="file-input-container">
+        <input type="file" id="file-input" accept=".xml">
+    </div>
+    
+    <table id="anime-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Tipo</th>
+                <th>Episodi</th>
+                <th>Score</th>
+                <th>Data di inizio</th>
+                <th>Data di fine</th>
+            </tr>
+        </thead>
+        <tbody id="anime-list"></tbody>
+    </table>
+
+    <script>
+        document.getElementById('file-input').addEventListener('change', handleFileInput);
+    </script>
+</body>
+</html>
